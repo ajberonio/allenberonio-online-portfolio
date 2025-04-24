@@ -1,0 +1,84 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+  height: 100vh; /* Ensure the body and html take up the full viewport height */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #111 url('images/bgm.jpg') no-repeat center center fixed; /* Adds background image */
+  background-size: cover; /* Ensures the image covers the entire background */
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.portfolio-text {
+  font-size: 352px;
+  font-family: 'Anton', sans-serif;
+  font-weight: bold;
+  letter-spacing: 0px; /* Neutral letter spacing to avoid overlap */
+  font-kerning: normal; /* Ensures proper kerning between letters */
+  color: #f5f5f5; /* "Death white" shade */
+  line-height: 1;
+  position: relative; /* Ensures proper stacking */
+  z-index: 1; /* Keeps text behind the image */
+  text-align: center; /* Centers the text */
+  top: 120px; /* Moves the text further down */
+}
+
+.image-container {
+  position: relative; /* Enables positioning of child elements */
+  width: 100%; /* Ensures the container spans the full width */
+  height: 100%; /* Ensures the container spans the full height */
+  display: flex; /* Allows flexible positioning */
+  justify-content: center; /* Centers the images horizontally */
+  align-items: center; /* Centers the images vertically */
+}
+
+.image-container img:first-child {
+  position: absolute; /* Layers the left image */
+  top: -220px; /* Moves the image higher */
+  left: 25%; /* Adjusts position to make it visible on the left */
+  transform: translateX(-10%); /* Reduces the horizontal offset */
+  z-index: 1; /* Places it behind the center image */
+  width: 400px; /* Explicitly set the width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.image-container img:nth-child(2) {
+  position: relative; /* Keeps the center image in the foreground */
+  z-index: 2; /* Places it in front */
+  width: auto; /* Adjust dynamically */
+  height: calc(100vh - 150px); /* Reaches the center of the "PORTFOLIO" word */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  top: -150px; /* Moves the image up */
+}
+
+.image-container img:last-child {
+  position: absolute; /* Layers the right image */
+  top: -260px; /* Moves the image higher */
+  left: 40%; /* Positions it to the right of the center image */
+  transform: translateX(30%); /* Adjusts horizontal offset */
+  z-index: 1; /* Places it behind the center image */
+  width: 400px; /* Explicitly set the width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  text-align: right;
+  font-size: 12px;
+}

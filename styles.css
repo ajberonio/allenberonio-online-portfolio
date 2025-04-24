@@ -1,0 +1,357 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+header {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+nav {
+    background: #333;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #4caf50;
+    transform: scale(1.1);
+}
+
+main section {
+    margin: 3rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+main section h2 {
+    color: #4caf50;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+main section ul, main section article {
+    margin-top: 1.5rem;
+}
+
+main section ul li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #4caf50;
+    transform: scale(1.2);
+}
+
+/* About Me Section Styling */
+.about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+.about-text {
+    flex: 1; /* Takes the remaining space */
+    color: #333;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Back-to-Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background-color: #388e3c;
+    transform: scale(1.1);
+}
+
+#back-to-top i {
+    font-size: 1.5rem;
+}
+
+/* Project Section Styling */
+#my-projects-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+#my-projects {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition for navigation */
+    gap: 2rem; /* Space between project boxes */
+}
+
+#my-projects article {
+    flex: 0 0 300px; /* Fixed width for each project box */
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#my-projects article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#my-projects article:hover {
+    transform: translateY(-10px); /* Adds a hover effect */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#my-projects article h3 {
+    color: #4caf50;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#my-projects article p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.swipe-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.swipe-button.left {
+    left: 10px; /* Position the left button */
+}
+
+.swipe-button.right {
+    right: 10px; /* Position the right button */
+}
+
+.swipe-button:hover {
+    background-color: #388e3c;
+    transform: scale(1.1);
+}
+
+.swipe-button i {
+    font-size: 1.5rem;
+}
+
+/* Education Section Styling */
+#education ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Adds space between each education entry */
+    list-style: none;
+    padding: 0;
+}
+
+#education ul li {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Adds space between the logo and text */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#education ul li:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#education ul li img {
+    width: 80px; /* Fixed size for logos */
+    height: 80px;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    object-fit: cover; /* Ensures the logo fits within the dimensions */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#education ul li div {
+    flex: 1; /* Ensures the text takes up the remaining space */
+}
+
+#education ul li div strong {
+    font-size: 1.2rem;
+    color: #4caf50;
+}
+
+#education ul li div em {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Certifications Section Styling */
+#certifications ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Adds space between each certification */
+    list-style: none;
+    padding: 0;
+}
+
+#certifications ul li {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Adds space between the icon and text */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#certifications ul li:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#certifications ul li i {
+    font-size: 1.5rem;
+    color: #4caf50;
+}
+
+#certifications ul li div {
+    flex: 1; /* Ensures the text takes up the remaining space */
+}
+
+#certifications ul li div strong {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#certifications ul li div em {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
